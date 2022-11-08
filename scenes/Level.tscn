@@ -53,29 +53,29 @@ shape = SubResource( 2 )
 position = Vector2( 1295, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightGoal"]
-position = Vector2( -9, 359.5 )
+position = Vector2( -4, 359 )
 shape = SubResource( 2 )
 
 [node name="Scoreboard" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Sprite" type="Sprite" parent="Scoreboard"]
-position = Vector2( 134, 21 )
+[node name="Player1" type="Sprite" parent="Scoreboard"]
+position = Vector2( 136, 25 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 7 )
 
-[node name="Sprite2" type="Sprite" parent="Scoreboard"]
-position = Vector2( 1140, 24 )
+[node name="Player2" type="Sprite" parent="Scoreboard"]
+position = Vector2( 1143, 25 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 7 )
 flip_h = true
 
 [node name="PlayerScore" type="Label" parent="Scoreboard"]
-margin_left = 48.0
-margin_top = -1.0
-margin_right = 237.0
-margin_bottom = 39.0
+margin_left = 51.0
+margin_top = 4.0
+margin_right = 240.0
+margin_bottom = 44.0
 theme = ExtResource( 6 )
 text = "Player 1 :    0"
 
@@ -85,7 +85,7 @@ margin_top = 4.0
 margin_right = 1068.0
 margin_bottom = 44.0
 theme = ExtResource( 6 )
-text = "0   : Computer"
+text = "0   : Player 2"
 
 [node name="Timer" type="Timer" parent="."]
 

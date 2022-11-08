@@ -12,6 +12,8 @@ func _on_RightGoal_body_entered(body):
 	PlayerScore += 1
 	
 func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://scenes/Menu.tscn")
 	$Scoreboard/PlayerScore.text = "Player 1 :   " + str(PlayerScore)
 	$Scoreboard/ComputerScore.text = str(ComputerScore) + "   : Computer"
 
