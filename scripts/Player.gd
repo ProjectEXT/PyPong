@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var speed = 500
 
+# Basic Player Input
 func _physics_process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("player1_up"):

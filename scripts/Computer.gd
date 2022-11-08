@@ -6,6 +6,7 @@ var ball
 func _ready():
 	ball = get_parent().find_node("Ball")
 	
+# Move the paddle in the direction of the ball at the set speed
 func _physics_process(delta):
 	move_and_slide(Vector2(0,get_ball_direction()) * speed)
 	
