@@ -1,7 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/theme.theme" type="Theme" id=1]
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/Input/W.png" type="Texture" id=3]
+[ext_resource path="res://assets/Input/ARROWDOWN.png" type="Texture" id=4]
+[ext_resource path="res://assets/Input/S.png" type="Texture" id=5]
+[ext_resource path="res://assets/Input/ARROWUP.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/FredokaOne-Regular.ttf"
@@ -66,6 +70,50 @@ margin_bottom = -152.0
 theme = SubResource( 8 )
 text = "PyPong"
 align = 1
+
+[node name="Input" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Player1" type="Label" parent="Input"]
+margin_left = 200.0
+margin_top = 300.0
+margin_right = 330.0
+margin_bottom = 340.0
+theme = ExtResource( 1 )
+text = "Player 1:"
+
+[node name="Player2" type="Label" parent="Input"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -280.0
+margin_top = -60.0
+margin_right = -144.0
+margin_bottom = -20.0
+theme = ExtResource( 1 )
+text = "Player 2:"
+
+[node name="W" type="Sprite" parent="Input"]
+position = Vector2( 250, 380 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+
+[node name="S" type="Sprite" parent="Input"]
+position = Vector2( 250, 432 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+
+[node name="Arrowup" type="Sprite" parent="Input"]
+position = Vector2( 1060, 380 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+
+[node name="Arrowdown" type="Sprite" parent="Input"]
+position = Vector2( 1060, 432 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 anchor_left = 0.5

@@ -18,6 +18,7 @@ extents = Vector2( 10, 353.75 )
 script = ExtResource( 5 )
 
 [node name="Board" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.196078 )
 position = Vector2( 640, 360 )
 scale = Vector2( 1.59601, 1.58242 )
 texture = ExtResource( 2 )
