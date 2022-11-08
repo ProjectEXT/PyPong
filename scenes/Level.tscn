@@ -9,10 +9,10 @@
 [ext_resource path="res://assets/ScoreBar.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 644, 10 )
+extents = Vector2( 633.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 356.5 )
+extents = Vector2( 10, 353.75 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 5 )
@@ -31,21 +31,22 @@ position = Vector2( 1259, 357 )
 position = Vector2( 641, 343 )
 
 [node name="WallTop" type="StaticBody2D" parent="."]
+position = Vector2( -33, 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
-position = Vector2( 640, -9 )
+position = Vector2( 657, -9 )
 shape = SubResource( 1 )
 
 [node name="WallBottom" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom"]
-position = Vector2( 640, 729 )
+position = Vector2( 633.5, 729 )
 shape = SubResource( 1 )
 
 [node name="LeftGoal" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftGoal"]
-position = Vector2( -9, 359.5 )
+position = Vector2( -13, 360.75 )
 shape = SubResource( 2 )
 
 [node name="RightGoal" type="Area2D" parent="."]
@@ -78,7 +79,7 @@ margin_bottom = 39.0
 theme = ExtResource( 6 )
 text = "Player 1 :    0"
 
-[node name="ComputerScore" type="Label" parent="Scoreboard"]
+[node name="Player2Score" type="Label" parent="Scoreboard"]
 margin_left = 1028.0
 margin_top = 4.0
 margin_right = 1068.0
@@ -86,5 +87,8 @@ margin_bottom = 44.0
 theme = ExtResource( 6 )
 text = "0   : Computer"
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="LeftGoal" to="." method="_on_LeftGoal_body_entered"]
 [connection signal="body_entered" from="RightGoal" to="." method="_on_RightGoal_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -23,9 +23,10 @@ scale = Vector2( 1.59601, 1.58242 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 12, 292 )
+position = Vector2( 15, 360 )
 
 [node name="Computer" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1265, 360 )
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 641, 343 )
@@ -86,5 +87,8 @@ margin_bottom = 44.0
 theme = ExtResource( 7 )
 text = "0   : Computer"
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="LeftGoal" to="." method="_on_LeftGoal_body_entered"]
 [connection signal="body_entered" from="RightGoal" to="." method="_on_RightGoal_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
