@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="PyPong"
-run/main_scene="res://scenes/AIlevel.tscn"
+run/main_scene="res://scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -54,4 +54,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+environment/default_clear_color=Color( 0.145098, 0.133333, 0.133333, 1 )
 environment/default_environment="res://default_env.tres"

@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/theme.theme" type="Theme" id=1]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/FredokaOne-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 64
+font_data = SubResource( 1 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.741176, 0.341176, 0.341176, 0.564706 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.713726, 0.690196, 0.690196, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.482353, 0.215686, 0.215686, 0.564706 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.713726, 0.690196, 0.690196, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.768627, 0.384314, 0.384314, 0.564706 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.713726, 0.690196, 0.690196, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.0
+margin_top = -231.0
+margin_right = 122.0
+margin_bottom = -152.0
+theme = SubResource( 8 )
+text = "PyPong"
+align = 1
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = -65.0
+margin_right = 101.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+custom_constants/separation = 20
+
+[node name="Ai" type="Button" parent="Buttons"]
+margin_right = 202.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+text = "One Player"
+
+[node name="Friend" type="Button" parent="Buttons"]
+margin_top = 66.0
+margin_right = 202.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+text = "Two Player"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Quit" type="Button" parent="Buttons"]
+margin_top = 132.0
+margin_right = 202.0
+margin_bottom = 178.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+text = "Quit Game"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="Buttons/Ai" to="." method="_on_Ai_pressed"]
+[connection signal="pressed" from="Buttons/Friend" to="." method="_on_Friend_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_Quit_pressed"]
