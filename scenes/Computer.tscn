@@ -5,7 +5,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.5, 60 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Computer" type="KinematicBody2D"]
+position = Vector2( 1246, 345 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
